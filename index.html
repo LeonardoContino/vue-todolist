@@ -30,7 +30,7 @@
             :class="{'text-decoration-line-through': task.done}"
             class="list-group-item d-flex justify-content-between"
             
-          >{{task.text}} <i class="bi bi-basket3"></i> </li>
+          >{{task.text}} <i class="bi bi-basket3" @click="deleteTask(i)"></i> </li>
         </ul>
       </div>
     </div>

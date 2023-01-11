@@ -33,7 +33,12 @@ const app = Vue.createApp({
       ]
     };
   },
-  methods() {}
+  methods: {
+    deleteTask(i) {
+      this.tasks.splice(i, 1)
+    
+    }
+  }
 });
 
 app.mount("#root");
