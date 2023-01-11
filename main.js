@@ -24,16 +24,16 @@ const app = Vue.createApp({
       tasks: [
         {
           text: "fare la spesa",
-          done: true,
+          done: true
         },
         {
           text: "andare in palestra",
-          done: false,
-        },
-      ],
+          done: false
+        }
+      ]
     };
   },
-  methods() {},
+  methods() {}
 });
 
 app.mount("#root");

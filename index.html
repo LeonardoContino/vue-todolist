@@ -26,7 +26,9 @@
           <li
             v-for="(task, i) in tasks"
             v-text="task.text"
-            class="list-group-item text-decoration-line-through"
+            :class="{'text-decoration-line-through': task.done}"
+            class="list-group-item"
+            
           ></li>
         </ul>
       </div>
