@@ -23,7 +23,11 @@
       </div>
       <div id="root">
         <ul class="list-group list-group-flush">
-          <li v-for="task in tasks" class="list-group-item">{{task.text}}</li>
+          <li
+            v-for="(task, i) in tasks"
+            v-text="task.text"
+            class="list-group-item text-decoration-line-through"
+          ></li>
         </ul>
       </div>
     </div>

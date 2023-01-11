@@ -33,6 +33,7 @@ const app = Vue.createApp({
       ],
     };
   },
+  methods() {},
 });
 
 app.mount("#root");
