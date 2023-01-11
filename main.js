@@ -30,13 +30,23 @@ const app = Vue.createApp({
           text: "andare in palestra",
           done: false
         }
-      ]
+      ],
+      addtask: [
+        {
+          text: '',
+          done: false
+        }
+      ] 
+
     };
   },
   methods: {
     deleteTask(i) {
       this.tasks.splice(i, 1)
     
+    },
+    addTask(){
+      this.tasks.push(this.addtask)
     }
   }
 });

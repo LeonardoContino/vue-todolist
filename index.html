@@ -23,6 +23,10 @@
         <img class="img-fluid img-logo" src="booleanlogo.png" alt="" />
       </div>
       <div id="root">
+        <div class="input-group m-3">
+          <input type="text" class="form-control" placeholder="Aggiungi task" v-model="addtask.text">
+          <button class="btn btn-outline-primary" type="button" id="button-addon2" @click="addTask">add</button>
+        </div>
         <ul class="list-group list-group-flush ">
           <li
             v-for="(task, i) in tasks"
