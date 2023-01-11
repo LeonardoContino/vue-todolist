@@ -24,17 +24,17 @@
       </div>
       <div id="root">
         <div class="input-group m-3">
-          <input type="text" class="form-control" placeholder="Aggiungi task" v-model="addtask.text">
+          <input type="text" class="form-control" @keyup.enter="addTask" placeholder="Aggiungi task" v-model.trim="taskText">
           <button class="btn btn-outline-primary" type="button" id="button-addon2" @click="addTask">add</button>
         </div>
         <ul class="list-group list-group-flush ">
           <li
             v-for="(task, i) in tasks"
-            
+           
             :class="{'text-decoration-line-through': task.done}"
-            class="list-group-item d-flex justify-content-between"
+            class="list-group-item d-flex justify-content-between cursor"
             
-          >{{task.text}} <i class="bi bi-basket3" @click="deleteTask(i)"></i> </li>
+          >{{task.text}} <i class="bi bi-basket3 " @click="deleteTask(i)"></i> </li>
         </ul>
       </div>
     </div>
