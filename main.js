@@ -46,7 +46,11 @@ const app = Vue.createApp({
     
     },
     addTask(){
-      this.tasks.push(this.addtask)
+      if(this.addtask){
+        this.tasks.push(this.addtask);
+        this.addtask = '';
+      }
+      
     }
   }
 });
