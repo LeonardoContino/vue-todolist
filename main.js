@@ -31,12 +31,7 @@ const app = Vue.createApp({
           done: false
         }
       ],
-      addtask: [
-        {
-          text: '',
-          done: false
-        }
-      ] 
+      taskText: ''
 
     };
   },
@@ -46,12 +41,19 @@ const app = Vue.createApp({
     
     },
     addTask(){
-      if(this.addtask){
-        this.tasks.push(this.addtask);
-        this.addtask = '';
+      if(this.taskText){
+        const newTask = {
+          text: this.taskText,
+          done: false
+        }
+        this.tasks.push(newTask);
+        this.taskText = '';
+        
       }
       
-    }
+    },
+    
+    
   }
 });
 
