@@ -52,6 +52,10 @@ const app = Vue.createApp({
       }
       
     },
+    toggleTask(i){
+      this.tasks[i].done = !this.tasks[i].done
+
+    }
     
     
   }
